@@ -1,37 +1,17 @@
-name: activity
-display_name: activity_tracking_for_avi
-# use 'hidden' to remove plugin from napari hub search results
-visibility: public
-# see https://napari.org/stable/plugins/technical_references/manifest.html#fields for valid categories
-categories: ["Annotation", "Segmentation", "Acquisition"]
+name: activity-tracking-for-avi
+display_name: AVI Activity Analysis
 contributions:
   commands:
-    - id: activity.get_reader
+    - id: activity-tracking-for-avi.get_reader
       python_name: activity_tracking_for_avi._reader:napari_get_reader
-      title: Open data with activity_tracking_for_avi
-    - id: activity.make_container_widget
-      python_name: activity_tracking_for_avi:ImageThreshold
-      title: Make threshold Container widget
-    - id: activity.make_magic_widget
-      python_name: activity_tracking_for_avi:threshold_magic_widget
-      title: Make threshold magic widget
-    - id: activity.make_function_widget
-      python_name: activity_tracking_for_avi:threshold_autogenerate_widget
-      title: Make threshold function widget
-    - id: activity.make_qwidget
-      python_name: activity_tracking_for_avi:ExampleQWidget
-      title: Make example QWidget
+      title: Open AVI file with activity_tracking_for_avi
+    - id: activity-tracking-for-avi.widget
+      python_name: activity_tracking_for_avi._widget:ActivityAnalysisWidget
+      title: Make activity analysis widget
   readers:
-    - command: activity.get_reader
-      accepts_directories: false
-      filename_patterns: ['*.npy']
+    - command: activity-tracking-for-avi.get_reader
+      accepts_directories: true
+      filename_patterns: ['*.avi']
   widgets:
-    - command: activity.make_container_widget
-      display_name: Container Threshold
-    - command: activity.make_magic_widget
-      display_name: Magic Threshold
-    - command: activity.make_function_widget
-      autogenerate: true
-      display_name: Autogenerate Threshold
-    - command: activity.make_qwidget
-      display_name: Example QWidget
+    - command: activity-tracking-for-avi.widget
+      display_name: AVI Activity Analysis
