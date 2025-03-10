@@ -11,6 +11,6 @@ from ._reader import napari_get_reader
 from ._widget import ActivityAnalysisWidget
 
 __all__ = (
-    "napari_get_reader",
     "ActivityAnalysisWidget",
+    "napari_get_reader",
 )

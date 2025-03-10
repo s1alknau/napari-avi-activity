@@ -1,17 +1,17 @@
-name: activity-tracking-for-avi
+name: activity_tracking_for_avi
 display_name: AVI Activity Analysis
 contributions:
   commands:
-    - id: activity-tracking-for-avi.get_reader
+    - id: activity_tracking_for_avi.get_reader
       python_name: activity_tracking_for_avi._reader:napari_get_reader
       title: Open AVI file with activity_tracking_for_avi
-    - id: activity-tracking-for-avi.widget
+    - id: activity_tracking_for_avi.widget
       python_name: activity_tracking_for_avi._widget:ActivityAnalysisWidget
       title: Make activity analysis widget
   readers:
-    - command: activity-tracking-for-avi.get_reader
+    - command: activity_tracking_for_avi.get_reader
       accepts_directories: true
       filename_patterns: ['*.avi']
   widgets:
-    - command: activity-tracking-for-avi.widget
+    - command: activity_tracking_for_avi.widget
       display_name: AVI Activity Analysis

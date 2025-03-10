@@ -3,14 +3,14 @@ requires = ["setuptools>=42.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "activity-tracking-for-avi"
+name = "activity_tracking_for_avi"
 version = "0.1.0"
 description = "A napari plugin for analyzing activity and sleep behavior from AVI video files"
 readme = "README.md"
 requires-python = ">=3.8"
-license = {file = "LICENSE"}
+license = { file = "LICENSE" }
 authors = [
-    {name = "Your Name", email = "your.email@example.com"}
+    { name = "Your Name", email = "your.email@example.com" }
 ]
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -38,11 +38,11 @@ dependencies = [
 "Bug Tracker" = "https://github.com/s1alknau/napari-avi-activity/issues"
 
 [project.entry-points."napari.manifest"]
-activity-tracking-for-avi = "activity_tracking_for_avi:napari.yaml"
+activity_tracking_for_avi = "activity_tracking_for_avi:napari.yaml"
 
 [tool.setuptools]
 packages = ["activity_tracking_for_avi"]
-package-dir = {"" = "src"}
+package-dir = { "" = "src" }
 
 [tool.black]
 line-length = 88
@@ -51,26 +51,29 @@ target-version = ['py38', 'py39', 'py310']
 [tool.ruff]
 line-length = 88
 target-version = "py38"
+
+[tool.ruff.lint]
 select = [
-    "E", "F", "W", # flake8
-    "B",           # flake8-bugbear
-    "I",           # isort
-    "ARG",         # flake8-unused-arguments
-    "C4",          # flake8-comprehensions
-    "EM",          # flake8-errmsg
-    "ICN",         # flake8-import-conventions
-    "ISC",         # flake8-implicit-str-concat
-    "PGH",         # pygrep-hooks
-    "PIE",         # flake8-pie
-    "PL",          # pylint
-    "PT",          # flake8-pytest-style
-    "RET",         # flake8-return
-    "RUF",         # Ruff-specific
-    "SIM",         # flake8-simplify
-    "T20",         # flake8-print
-    "UP",          # pyupgrade
-    "YTT",         # flake8-2020
+    "E", "F", "W",       # flake8
+    "B",                 # flake8-bugbear
+    "I",                 # isort
+    "ARG",               # flake8-unused-arguments
+    "C4",                # flake8-comprehensions
+    "EM",                # flake8-errmsg
+    "ICN",               # flake8-import-conventions
+    "ISC",               # flake8-implicit-str-concat
+    "PGH",               # pygrep-hooks
+    "PIE",               # flake8-pie
+    "PL",                # pylint
+    "PT",                # flake8-pytest-style
+    "RET",               # flake8-return
+    "RUF",               # Ruff-specific
+    "SIM",               # flake8-simplify
+    "T20",               # flake8-print
+    "UP",                # pyupgrade
+    "YTT",               # flake8-2020
 ]
+
 ignore = [
     "E501",      # line too long
     "PLE0604",   # Invalid object in `globals()`
